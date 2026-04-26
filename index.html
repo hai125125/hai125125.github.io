@@ -4,14 +4,30 @@
 <meta charset="UTF-8">
 <title>Hai Nguyen Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
-  background: #0f172a;
   color: white;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1526481280691-906d7b9e0a3d') no-repeat center/cover;
+  position: relative;
+}
+
+/* overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: -1;
 }
 
 /* NAV */
@@ -20,26 +36,51 @@ nav {
   justify-content: center;
   gap: 30px;
   padding: 20px;
-  background: #020617;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 }
+
 nav a {
-  color: #94a3b8;
+  color: #ccc;
   text-decoration: none;
+  transition: 0.3s;
 }
+
 nav a:hover {
-  color: white;
+  color: #00ffff;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
 }
+
+/* avatar */
+.avatar {
+  width: 140px;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 25px #00ffff;
+  margin-bottom: 20px;
+}
+
 .hero h1 {
-  font-size: 48px;
+  font-size: 42px;
 }
+
 .hero p {
-  color: #94a3b8;
+  color: #ccc;
+}
+
+/* CODE BOX */
+.code-box {
+  margin: 40px auto;
+  max-width: 500px;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  font-family: monospace;
 }
 
 /* SECTION */
@@ -49,25 +90,26 @@ nav a:hover {
   margin: auto;
 }
 
-/* PROJECT CARD */
+/* PROJECT */
 .project {
-  background: #1e293b;
+  background: rgba(0,0,0,0.7);
   padding: 20px;
   border-radius: 15px;
   margin-top: 20px;
   transition: 0.3s;
 }
+
 .project:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* FOOTER */
+/* footer */
 footer {
-  text-align: center;
   padding: 20px;
-  color: #94a3b8;
+  color: #aaa;
 }
 </style>
+
 </head>
 
 <body>
@@ -79,14 +121,32 @@ footer {
 </nav>
 
 <div class="hero">
+
+  <!-- avatar (bạn thay link ảnh của bạn) -->
+  <img src="https://i.imgur.com/your-avatar.png" class="avatar">
+
   <h1>Hai Nguyen</h1>
   <p>IoT • Embedded • AI Developer</p>
+
+  <!-- code style -->
+  <div class="code-box">
+<pre>
+class HaiNguyen:
+    role = "IoT Developer"
+    skills = ["ESP32", "MQTT", "AI"]
+    focus = "Smart Home System"
+
+    def build(self):
+        return "Automation + Intelligence"
+</pre>
+  </div>
+
 </div>
 
 <div class="section" id="about">
   <h2>About Me</h2>
   <p>
-    I am an IoT developer focusing on ESP32, MQTT systems, and AI integration.
+    I am an IoT developer specializing in ESP32, MQTT communication, and AI integration.
     I build smart home systems with real-time control, voice interaction, and touch interfaces.
   </p>
 </div>
@@ -97,10 +157,10 @@ footer {
   <div class="project">
     <h3>Smart Home Device Control System</h3>
     <p>
-      ESP32-based smart home system using MQTT protocol.
+      A smart home system using ESP32 and MQTT protocol.
       Supports voice control, touchscreen interface, and AI gesture recognition.
     </p>
-    <p>Tech: ESP32 • MQTT • Python • AI</p>
+    <p><b>Tech:</b> ESP32 • MQTT • Python • AI</p>
     <a href="https://github.com/hai125125" target="_blank">View GitHub</a>
   </div>
 
@@ -108,7 +168,7 @@ footer {
 
 <div class="section" id="contact">
   <h2>Contact</h2>
-  <p>Email: duchainguyen230@gmail.com</p>
+  <p>Email: your-email@gmail.com</p>
   <p>GitHub: github.com/hai125125</p>
 </div>
 
