@@ -1,48 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Taurus Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #2E7D32, #A5D6A7);
-      color: white;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>Hai Nguyen Portfolio</title>
 
-    .container {
-      padding: 100px 20px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
-    h1 {
-      font-size: 50px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+}
 
-    p {
-      font-size: 20px;
-      opacity: 0.9;
-    }
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: #020617;
+}
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+}
 
-    .box {
-      margin-top: 40px;
-      padding: 20px;
-      background: rgba(0,0,0,0.2);
-      border-radius: 15px;
-      display: inline-block;
-    }
-  </style>
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 48px;
+}
+.hero p {
+  color: #94a3b8;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* PROJECT CARD */
+.project {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.project:hover {
+  transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+</style>
 </head>
-<body>
-  <div class="container">
-    <h1>🌿 Taurus Developer</h1>
-    <p>Stable • Calm • Builder</p>
 
-    <div class="box">
-      <p>💻 IoT / Embedded / AI</p>
-      <p>⚙️ ESP32 • MQTT • Linux</p>
-    </div>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <h1>Hai Nguyen</h1>
+  <p>IoT • Embedded • AI Developer</p>
+</div>
+
+<div class="section" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am an IoT developer focusing on ESP32, MQTT systems, and AI integration.
+    I build smart home systems with real-time control, voice interaction, and touch interfaces.
+  </p>
+</div>
+
+<div class="section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Smart Home Device Control System</h3>
+    <p>
+      ESP32-based smart home system using MQTT protocol.
+      Supports voice control, touchscreen interface, and AI gesture recognition.
+    </p>
+    <p>Tech: ESP32 • MQTT • Python • AI</p>
+    <a href="https://github.com/hai125125" target="_blank">View GitHub</a>
   </div>
+
+</div>
+
+<div class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: duchainguyen230@gmail.com</p>
+  <p>GitHub: github.com/hai125125</p>
+</div>
+
+<footer>
+  © 2026 Hai Nguyen
+</footer>
+
 </body>
 </html>
